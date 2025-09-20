@@ -1,0 +1,35 @@
+.category-banner {
+  width: 100vw;
+  height: 340px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+}
+.category-banner-title {
+  position: absolute;
+  left: 40px;
+  bottom: 32px;
+  background: #fff;
+  color: #FF6A00;
+  font-size: 2.2rem;
+  font-weight: 800;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1rem 2.5rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .category-banner-title {
+    left: 16px;
+    bottom: 16px;
+    font-size: 1.3rem;
+    padding: 0.7rem 1.2rem;
+  }
+  .category-banner {
+    height: 180px;
+  }
+}

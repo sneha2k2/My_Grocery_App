@@ -1,0 +1,171 @@
+.contactForm,
+.contactInput,
+.contactTextarea {
+  box-sizing: border-box;
+}
+/* About, Process, and Contact page styles */
+
+
+.pageContainer {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, #f9fafb 60%, #fbbf24 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(249,115,22,0.08), 0 2px 8px rgba(0,0,0,0.04);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pageContainer::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #f97316 40%, transparent 70%);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f97316;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+.pageTitle::after {
+  content: '✨';
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+
+.pageText {
+  font-size: 1.18rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 1.7rem;
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 1;
+}
+
+
+.processList {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+
+.processStep {
+  background: linear-gradient(90deg, #f97316 10%, #fbbf24 90%);
+  border-radius: 1.2rem;
+  margin-bottom: 1.2rem;
+  padding: 1.1rem 1.7rem;
+  font-size: 1.15rem;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(249,115,22,0.07);
+  font-weight: 500;
+  position: relative;
+  transition: transform 0.2s;
+}
+.processStep::before {
+  content: '🛒';
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+}
+.processStep:hover {
+  transform: scale(1.03);
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  margin-top: 1.5rem;
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 2rem 1.2rem;
+  z-index: 1;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.contactForm > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contactLabel {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #f97316;
+  font-size: 1.08rem;
+  padding-left: 0.1rem;
+}
+
+.contactInput,
+.contactTextarea {
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  border: 1.5px solid #fbbf24;
+  font-size: 1.05rem;
+  background: #fffbe6;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(249,115,22,0.04);
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.2rem;
+  box-sizing: border-box;
+}
+
+.contactInput:focus,
+.contactTextarea:focus {
+  border: 2px solid #f97316;
+  outline: none;
+  box-shadow: 0 0 0 2px #fbbf24;
+}
+
+
+.contactButton {
+  background: linear-gradient(90deg,#f97316,#fbbf24);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(249,115,22,0.09);
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+.contactButton:hover {
+  background: linear-gradient(90deg,#fbbf24,#f97316);
+  transform: scale(1.04);
+}

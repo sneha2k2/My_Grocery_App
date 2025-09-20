@@ -1,0 +1,48 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Dependency directories
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage
+coverage/
+
+# Misc
+*.tgz
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Windows
+*.exe
+*.dll
+*.obj
+*.pdb
+*.idb
+*.class
+*.psd
+
+# Optional: ignore pictures if not needed in repo
+# src/pictures/

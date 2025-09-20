@@ -1,0 +1,153 @@
+.section {
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  color: #222;
+  position: relative;
+}
+.titleUnderline {
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(90deg,#FF6A00,#fbbf24);
+  border-radius: 999px;
+  margin: 0.5rem auto 1.5rem auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+.tab {
+  background: #f9fafb;
+  border: none;
+  padding: 0.7rem 2.2rem 0.7rem 2.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  cursor: pointer;
+  color: #FF6A00;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(255,106,0,0.07);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.tab:hover {
+  background: #ffe7d1;
+  color: #d35400;
+  box-shadow: 0 4px 16px rgba(255,106,0,0.13);
+}
+.activeTab {
+  background: linear-gradient(90deg,#FF6A00,#fbbf24);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,106,0,0.13);
+}
+.tabIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF6A00;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(255,106,0,0.09);
+}
+.grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover {
+  box-shadow: 0 6px 24px rgba(255,106,0,0.12);
+  transform: scale(1.04);
+}
+.heartWrap {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.heart {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+.image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+.name {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+.add {
+  background: #FF6A00;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+.add:disabled {
+  background: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+}
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .card {
+    width: 90vw;
+    max-width: 250px;
+  }
+}

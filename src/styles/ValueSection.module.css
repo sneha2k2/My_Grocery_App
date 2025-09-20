@@ -1,0 +1,121 @@
+
+.section {
+  padding: 3rem 1rem 2.5rem 1rem;
+  background: #fff;
+}
+.title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  position: relative;
+  color: #222;
+}
+.underline {
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg,#FF6A00,#fbbf24);
+  border-radius: 999px;
+  margin: 0.5rem auto 0 auto;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 2.5rem 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.valueRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.valueItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  min-width: 180px;
+  max-width: 220px;
+  transition: transform 0.2s;
+}
+.valueItem:hover .iconCircle {
+  box-shadow: 0 4px 16px rgba(255,106,0,0.13);
+  transform: scale(1.08);
+}
+.iconCircle {
+  background: #FF6A00;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(255,106,0,0.09);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.valueTitle {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #FF6A00;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.valueDesc {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+.basketWrapper {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.basketImg {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 1rem;
+  filter: drop-shadow(0 4px 16px rgba(255,106,0,0.09));
+}
+
+@media (max-width: 900px) {
+  .valueGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .basketWrapper {
+    order: 2;
+    margin: 2rem 0;
+  }
+  .valueRow {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    align-items: center;
+  }
+  .valueItem {
+    min-width: 0;
+    max-width: 320px;
+    width: 100%;
+  }
+  .basketImg {
+    width: 120px;
+  }
+}
