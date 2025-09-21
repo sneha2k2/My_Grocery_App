@@ -4,6 +4,7 @@ import fruitsData from '../data/fruitsData';
 import dairyData from '../data/dairyData';
 import seafoodData from '../data/seafoodData';
 import { useCart } from '../context/CartContext.jsx';
+import React from 'react';
 
 const allProducts = [
   ...fruitsData,

@@ -2,6 +2,7 @@ import '../styles/category-banner.css';
 import bgImg from '../pictures/dairy-banner.jpg';
 import dairyData from '../data/dairyData.js';
 import { useCart } from '../context/CartContext.jsx';
+import React from 'react';
 
 const DairyEggs = () => {
     const {
@@ -29,7 +30,7 @@ const DairyEggs = () => {
                   {/* Heart SVG */}
                   <svg width="24" height="24" fill={isInWishlist(prod.id) ? '#FF6A00' : 'none'} stroke="#FF6A00" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10A5 5 0 0 1 12 6a5 5 0 0 1 7 5c0 5.65-7 10-7 10z"/></svg>
                 </button>
-                <button className="category-add" onClick={() => addToCart(prod.id)}>
+                <button className="category-add" onClick={() => addToCart(prod)}>
                   +
                 </button>
               </div>

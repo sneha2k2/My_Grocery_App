@@ -11,8 +11,13 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        Gr<span className={styles.orange}>O</span>cify
-      </div>
+         <Link to="/" className={location.pathname === '/' ? styles.active : ''}>
+             <div className={styles.logo1}>
+               Gr<span className={styles.orange}>O</span>cify
+              </div>
+         </Link>
+       </div>
+
       <ul className={styles.menu}>
         <li><Link to="/" className={location.pathname === '/' ? styles.active : ''}>Home</Link></li>
         <li><Link to="/about" className={location.pathname === '/about' ? styles.active : ''}>About Us</Link></li>

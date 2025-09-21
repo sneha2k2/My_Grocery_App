@@ -1,5 +1,6 @@
 import styles from '../styles/HeroSection.module.css';
 import groceryImg from '../pictures/grocery.png';
+import React from 'react';
 
 const HeroSection = () => {
   return (
