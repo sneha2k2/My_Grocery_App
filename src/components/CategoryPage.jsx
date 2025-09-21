@@ -1,11 +1,8 @@
-import React from 'react';
 import styles from '../styles/CategoryPage.module.css';
 import { useCart } from '../context/CartContext';
 
 const CategoryPage = ({ title, products, bannerColor = '#FF6A00' }) => {
   const {
-    cart,
-    wishlist,
     addToCart,
     addToWishlist,
     removeFromWishlist,

@@ -1,33 +1,18 @@
-
-import React, { useState } from 'react';
 import '../styles/category-title.css';
 import bgImg from '../pictures/fruits-banner.jpg'
 import '../styles/category-grid.css';
-import productImg1 from '../pictures/strawberry.png';
-import productImg2 from '../pictures/cabbage.png';
-import productImg3 from '../pictures/pineapple.png';
-import productImg4 from '../pictures/broccoli.png';
+import fruitsData from '../data/fruitsData';
+import { useCart } from '../context/CartContext.jsx';
 
-const products = [
-  { id: 1, name: 'Strawberry', img: productImg1 },
-  { id: 2, name: 'Cabbage', img: productImg2 },
-  { id: 3, name: 'Pineapple', img: productImg3 },
-  { id: 4, name: 'Brocolli', img: productImg4 },
-
-];
+const products = fruitsData
 
 const FruitsVeggies = () => {
-  const [wishlist, setWishlist] = useState([]);
-  const [cart, setCart] = useState([]);
-
-  const toggleWishlist = id => {
-    setWishlist(wishlist.includes(id) ? wishlist.filter(i => i !== id) : [...wishlist, id]);
-  };
-  const addToCart = id => {
-    if (!cart.includes(id)) setCart([...cart, id]);
-  };
-
-
+    const {
+      addToCart,
+      addToWishlist,
+      removeFromWishlist,
+      isInWishlist
+    } = useCart();
 
   return (
     <div>
@@ -43,9 +28,11 @@ const FruitsVeggies = () => {
               <img src={prod.img} alt={prod.name} className="category-image" />
               <h3>{prod.name}</h3>
               <div className="category-actions">
-                <button className="category-heart" onClick={() => toggleWishlist(prod.id)}>
+                <button className="category-heart" onClick={() =>
+                  isInWishlist(prod.id) ? removeFromWishlist(prod.id) : addToWishlist(prod)
+                }>
                   {/* Heart SVG */}
-                  <svg width="24" height="24" fill={wishlist.includes(prod.id) ? '#FF6A00' : 'none'} stroke="#FF6A00" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10A5 5 0 0 1 12 6a5 5 0 0 1 7 5c0 5.65-7 10-7 10z"/></svg>
+                  <svg width="24" height="24" fill={isInWishlist(prod.id) ? '#FF6A00' : 'none'} stroke="#FF6A00" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10A5 5 0 0 1 12 6a5 5 0 0 1 7 5c0 5.65-7 10-7 10z"/></svg>
                 </button>
                 <button className="category-add" onClick={() => addToCart(prod.id)}>
                   +

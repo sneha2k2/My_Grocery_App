@@ -29,6 +29,7 @@
 }
 .green {
   color: #22c55e;
+  /* Removed decorative elements like border, background, or pseudo-elements */
 }
 .subtext {
   font-size: 1.15rem;

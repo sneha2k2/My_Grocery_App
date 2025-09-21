@@ -46,10 +46,11 @@
   color: #d35400;
   box-shadow: 0 4px 16px rgba(255,106,0,0.13);
 }
-.activeTab {
+.active1{
   background: linear-gradient(90deg,#FF6A00,#fbbf24);
-  color: #fff;
+  /* color: #fff; */
   box-shadow: 0 4px 16px rgba(255,106,0,0.13);
+  /* position: relative; */
 }
 .tabIcon {
   position: absolute;

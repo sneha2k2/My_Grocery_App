@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from '../styles/ProductSection.module.css';
 import fruitsData from '../data/fruitsData';
 import dairyData from '../data/dairyData';
@@ -21,8 +21,6 @@ const tabs = [
 const ProductSection = () => {
   const [activeTab, setActiveTab] = useState('All');
   const {
-    cart,
-    wishlist,
     addToCart,
     addToWishlist,
     removeFromWishlist,
@@ -42,7 +40,7 @@ const ProductSection = () => {
         {tabs.map(tab => (
           <button
             key={tab.label}
-            className={activeTab === tab.label ? styles.activeTab : styles.tab}
+            className={activeTab === tab.label ? styles.tab + ' ' + styles.active1 : styles.tab}
             onClick={() => setActiveTab(tab.label)}
           >
             <span className={styles.tabIcon}>
@@ -67,12 +65,10 @@ const ProductSection = () => {
         {products.map(product => (
           <div className={styles.card} key={product.id}>
             <div className={styles.heartWrap}>
-              <button
+              <button 
                 className={styles.heart}
                 onClick={() =>
-                  isInWishlist(product.id)
-                    ? removeFromWishlist(product.id)
-                    : addToWishlist(product)
+                  isInWishlist(product.id) ? removeFromWishlist(product.id) : addToWishlist(product)
                 }
               >
                 <svg width="20" height="20" fill={isInWishlist(product.id) ? '#FF6A00' : 'none'} stroke="#FF6A00" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10A5 5 0 0 1 12 6a5 5 0 0 1 7 5c0 5.65-7 10-7 10z"/></svg>

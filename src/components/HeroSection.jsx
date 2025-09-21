@@ -1,17 +1,14 @@
-import React from 'react';
 import styles from '../styles/HeroSection.module.css';
 import groceryImg from '../pictures/grocery.png';
-
-
 
 const HeroSection = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.left}>
-        <span className={styles.badge}>Export Best Quality...</span>
-        <h1 className={styles.heading}>
-          Tasty Organic <span className={styles.orange}>Fruits</span> & <span className={styles.green}>Veggies</span> In Your City
-        </h1>
+          <span className={styles.badge}>Export Best Quality...</span>
+          <h1 className={styles.heading}>
+            Tasty Organic <span className={styles.orange}>Fruits</span> & <span className={styles.green}>Veggies</span> In Your City
+          </h1>
         <p className={styles.subtext}>
           Bred for a high content of beneficial substances. Our products are all fresh and healthy.
         </p>
